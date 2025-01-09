@@ -1788,8 +1788,8 @@ void TextEditor::paintOverChildren (Graphics& g)
         g.setColour (colourForTextWhenEmpty);
         g.setFont (getFont());
 
-        Rectangle<int> textBounds (leftIndent,
-                                   topIndent,
+        Rectangle<int> textBounds (borderSize.getLeft() + leftIndent,
+                                   borderSize.getTop() + topIndent,
                                    viewport->getWidth() - leftIndent,
                                    getHeight() - topIndent);
 
@@ -1837,6 +1837,17 @@ void TextEditor::performPopupMenuAction (const int menuItemID)
         case StandardApplicationCommandIDs::redo:       redo(); break;
         default: break;
     }
+}
+//==============================================================================
+void TextEditor::mouseEnter (const MouseEvent& e)
+{
+    repaint();
+}
+
+//==============================================================================
+void TextEditor::mouseExit (const MouseEvent& e)
+{
+    repaint();
 }
 
 //==============================================================================

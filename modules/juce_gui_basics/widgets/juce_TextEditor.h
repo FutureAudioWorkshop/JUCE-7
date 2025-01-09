@@ -712,6 +712,10 @@ public:
     /** @internal */
     void paintOverChildren (Graphics&) override;
     /** @internal */
+    void mouseEnter (const MouseEvent&) override;
+    /** @internal */
+    void mouseExit (const MouseEvent&) override;
+    /** @internal */
     void mouseDown (const MouseEvent&) override;
     /** @internal */
     void mouseUp (const MouseEvent&) override;
