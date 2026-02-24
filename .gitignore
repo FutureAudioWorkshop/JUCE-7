@@ -46,6 +46,7 @@ profile
 **/Builds/Android/build
 **/Builds/Android/**/*.iml
 **/Builds/Android/local.properties
+**/Builds/Android/gradle.properties
 **/Builds/Android/app/build
 **/Builds/Android/app/.externalNativeBuild
 **/Builds/Android/app/.cxx
