@@ -480,7 +480,8 @@ void AudioProcessor::checkForDuplicateParamID ([[maybe_unused]] AudioProcessorPa
    #if JUCE_DEBUG
     if (auto* withID = dynamic_cast<HostedAudioProcessorParameter*> (param))
     {
-        auto insertResult = paramIDs.insert (withID->getParameterID());
+          auto paramID = withID->getParameterID();
+          auto insertResult = paramIDs.insert (paramID);
 
         // If you hit this assertion then the parameter ID is not unique
         jassert (insertResult.second);

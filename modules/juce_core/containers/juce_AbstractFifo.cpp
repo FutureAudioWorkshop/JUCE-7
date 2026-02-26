@@ -35,7 +35,10 @@ int AbstractFifo::getNumReady() const noexcept
 {
     auto vs = validStart.get();
     auto ve = validEnd.get();
-    return ve >= vs ? (ve - vs) : (bufferSize - (vs - ve));
+
+    int numReady = ve >= vs ? (ve - vs) : (bufferSize - (vs - ve));
+
+    return numReady;
 }
 
 void AbstractFifo::reset() noexcept

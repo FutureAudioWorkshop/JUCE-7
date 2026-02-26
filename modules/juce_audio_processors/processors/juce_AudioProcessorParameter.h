@@ -105,6 +105,8 @@ public:
     */
     virtual float getValue() const = 0;
 
+
+
     /** The host will call this method to change the value of a parameter.
 
         The host may call this at any time, including during the audio processing
